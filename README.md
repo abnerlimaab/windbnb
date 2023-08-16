@@ -18,4 +18,3 @@
 
 - Linkedin [abnerlima](https://www.linkedin.com/in/abnerlima/)
 - GitHub [abnerlimaab](https://github.com/abnerlimaab)
-- Twitter [@your-twitter](https://{twitter.com/your-username})
