@@ -38,6 +38,7 @@ module.exports = {
         "functional/functional-parameters": "off",
         "functional/no-try-statements": "error",
         "functional/no-this-expressions": "error",
+        "functional/prefer-immutable-types": "off",
         "@typescript-eslint/switch-exhaustiveness-check": "error",
         "no-var": "error",
         "no-param-reassign": "error",
