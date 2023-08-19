@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Only run pre-commit hook if changes were made in directory "front-end"
+if git diff --name-only --cached | grep -q "^front-end/"; then
+  # Run pre-commit hook logic here
+  cd front-end
+fi
