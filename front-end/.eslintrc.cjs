@@ -31,6 +31,7 @@ module.exports = {
       },
       rules: {
         'react/react-in-jsx-scope': 'off',
+        'react-hooks/exhaustive-deps': 'off',
         'react/jsx-filename-extension': [
           'error',
           { extensions: ['.jsx', '.tsx'] },
@@ -40,6 +41,8 @@ module.exports = {
         'functional/no-try-statements': 'error',
         'functional/no-this-expressions': 'error',
         'functional/prefer-immutable-types': 'off',
+        'functional/no-return-void': 'off',
+        'functional/no-mixed-types': 'off',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         'no-var': 'error',
         'no-param-reassign': 'error',
@@ -56,6 +59,7 @@ module.exports = {
             "svg": "always"
           }
         ],
+        "import/prefer-default-export": "off",
       },
     },
   ],
