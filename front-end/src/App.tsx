@@ -8,9 +8,21 @@ import SearchOptionsBar, {
   SearchOptionBarDivider,
 } from './components/SearchOptionsBar';
 import ToggleTheme from './components/ToggleTheme';
-import theme from './styles/theme';
-import { GlobalStyle, Main } from './styles';
 import StayCard from './components/StayCard';
+
+import theme from './styles/theme';
+
+import staysMock from './__mocks__/stays';
+
+import {
+  GlobalStyle,
+  Main,
+  Section,
+  SectionContent,
+  SectionHeader,
+  SectionSpan,
+  SectionTitle,
+} from './styles';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,9 +56,31 @@ function App() {
           </SearchOptionsBar>
         </Nav>
 
-        <StayCard />
+        <Section>
+          <SectionHeader>
+            <SectionTitle>Stays in Finland</SectionTitle>
 
-        <ToggleTheme onClick={() => setDarkMode(!darkMode)} darkMode={darkMode} />
+            <SectionSpan>{staysMock.length}+ stays</SectionSpan>
+          </SectionHeader>
+
+          <SectionContent>
+            {staysMock.map((stay) => (
+              <StayCard
+                key={stay.title}
+                imageUrl={stay.photo}
+                superHost={stay.superHost}
+                type={stay.type}
+                rating={stay.rating}
+                title={stay.title}
+              />
+            ))}
+          </SectionContent>
+        </Section>
+
+        <ToggleTheme
+          onClick={() => setDarkMode(!darkMode)}
+          darkMode={darkMode}
+        />
       </Main>
     </ThemeProvider>
   );

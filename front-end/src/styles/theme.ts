@@ -17,6 +17,7 @@ interface Fonts {
   searchBar: string;
   tag: string;
   title: string;
+  span: string;
 }
 
 export interface Theme {
@@ -58,6 +59,7 @@ const fonts: Fonts = {
   searchBar: 'Mulish, sans-serif',
   tag: 'Montserrat, sans-serif',
   title: 'Montserrat, sans-serif',
+  span: 'Montserrat, sans-serif',
 };
 
 const theme = {

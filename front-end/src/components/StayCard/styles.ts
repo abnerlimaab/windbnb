@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.article`
   width: 350px;
-  height: 313px;
 
   display: flex;
   flex-direction: column;
@@ -18,6 +17,7 @@ export const Image = styled.img`
 export const FlexRow = styled.div`
   display: flex;
   align-items: center;
+  height: 24px;
   gap: 9.75px;
 `;
 

@@ -8,16 +8,10 @@ interface StayCardProps {
   title: string;
   rating: number;
   superHost: boolean;
-  accommodation: string;
+  type: string;
 }
 
-function StayCard({
-  imageUrl,
-  title,
-  rating,
-  superHost,
-  accommodation,
-}: StayCardProps) {
+function StayCard({ imageUrl, title, rating, superHost, type }: StayCardProps) {
   return (
     <Container>
       <Image src={imageUrl} alt={title} />
@@ -25,7 +19,7 @@ function StayCard({
       <FlexRow>
         {superHost && <Tag>SUPER HOST</Tag>}
 
-        <Accommodation>{accommodation}</Accommodation>
+        <Accommodation>{type}</Accommodation>
 
         <Rating value={rating} />
       </FlexRow>
