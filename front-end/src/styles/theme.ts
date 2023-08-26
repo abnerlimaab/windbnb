@@ -4,6 +4,7 @@ interface ColorScheme {
   primary: string;
   primary90: string;
   border: string;
+  borderTag: string;
   shadow: string;
   textMain: string;
   textBackground: string;
@@ -12,12 +13,24 @@ interface ColorScheme {
   textHighlighted: string;
 }
 
+interface Fonts {
+  searchBar: string;
+  tag: string;
+  title: string;
+}
+
+export interface Theme {
+  colors: ColorScheme;
+  fonts: Fonts;
+}
+
 const lightColors: ColorScheme = {
   background: '#ffffff',
   themeButton: '#909090',
   primary: '#eb5757',
   primary90: '#eb5757e5',
   border: '#f2f2f2',
+  borderTag: '#4f4f4f',
   shadow: '#f2f2f2',
   textMain: '#333333',
   textBackground: '#f2f2f2',
@@ -32,6 +45,7 @@ const darkColors: ColorScheme = {
   primary: '#eb5757',
   primary90: '#eb5757e5',
   border: '#1e1e1e',
+  borderTag: '#a0a0a0',
   shadow: '#1e1e1e',
   textMain: '#ffffff',
   textBackground: '#1e1e1e',
@@ -40,19 +54,21 @@ const darkColors: ColorScheme = {
   textHighlighted: '#c4c4c4',
 };
 
-const fonts = {
+const fonts: Fonts = {
   searchBar: 'Mulish, sans-serif',
+  tag: 'Montserrat, sans-serif',
+  title: 'Montserrat, sans-serif',
 };
 
 const theme = {
   light: {
     colors: lightColors,
     fonts,
-  },
+  } as Theme,
   dark: {
     colors: darkColors,
     fonts,
-  },
+  } as Theme,
 };
 
 export default theme;

@@ -10,6 +10,7 @@ import SearchOptionsBar, {
 import ToggleTheme from './components/ToggleTheme';
 import theme from './styles/theme';
 import { GlobalStyle, Main } from './styles';
+import StayCard from './components/StayCard';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -42,6 +43,8 @@ function App() {
             </SearchOptionBarButton>
           </SearchOptionsBar>
         </Nav>
+
+        <StayCard />
 
         <ToggleTheme onClick={() => setDarkMode(!darkMode)} darkMode={darkMode} />
       </Main>
