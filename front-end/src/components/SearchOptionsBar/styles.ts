@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SearchOptionBarButtonProps } from '.';
+import { Breakpoints } from '../../styles/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +11,11 @@ export const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 16px;
   box-shadow: 0px 0px 4px 4px ${({ theme }) => theme.colors.shadow};
+
+  @media screen and (min-width: ${Breakpoints.md}) {
+    flex: none;
+    width: 300px;
+  }
 `;
 
 export const OptionButton = styled.button<SearchOptionBarButtonProps>`

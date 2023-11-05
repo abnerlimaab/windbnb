@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { Breakpoints } from './styles/theme';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -12,11 +13,17 @@ export const GlobalStyle = createGlobalStyle`
 export const Main = styled.main`
   background-color: ${({ theme }) => theme.colors.background};
   margin: 0 auto;
+  max-width: 1440px;
 `;
 
 export const Section = styled.section`
   padding: 1rem;
   margin: 0 auto;
+  max-width: 1250px;
+  
+  @media screen and (min-width: ${Breakpoints.xl}) {
+    max-width: 1150px;
+  }
 `;
 
 export const SectionHeader = styled.header`
