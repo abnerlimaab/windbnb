@@ -2,10 +2,11 @@ import { Container, Divider, OptionButton } from './styles';
 
 interface SearchOptionsBarProps {
   children: React.ReactNode;
+  onClick: () => void;
 }
 
-function SearchOptionsBar({ children }: SearchOptionsBarProps) {
-  return <Container>{children}</Container>;
+function SearchOptionsBar({ children, onClick }: SearchOptionsBarProps) {
+  return <Container onClick={onClick}>{children}</Container>;
 }
 export interface SearchOptionBarButtonProps {
   children: React.ReactNode;

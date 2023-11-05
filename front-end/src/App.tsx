@@ -23,9 +23,11 @@ import {
   SectionSpan,
   SectionTitle,
 } from './styles';
+import Filter from './components/Filter';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const themeMemo = useMemo(
     () => (darkMode ? theme.dark : theme.light),
@@ -35,9 +37,11 @@ function App() {
   return (
     <ThemeProvider theme={themeMemo}>
       <GlobalStyle />
+      <Filter isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
+
       <Main>
         <Nav>
-          <SearchOptionsBar>
+          <SearchOptionsBar onClick={() => setIsFilterOpen(true)}>
             <SearchOptionBarButton active>
               Helsinki, Finland
             </SearchOptionBarButton>

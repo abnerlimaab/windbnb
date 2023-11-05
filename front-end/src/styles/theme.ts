@@ -11,6 +11,7 @@ interface ColorScheme {
   textSubtitle: string;
   textMedium: string;
   textHighlighted: string;
+  backdrop: string;
 }
 
 interface Fonts {
@@ -46,6 +47,7 @@ const lightColors: ColorScheme = {
   textSubtitle: '#bdbdbd',
   textMedium: '#4f4f4f',
   textHighlighted: '#828282',
+  backdrop: '#4F4F4F66',
 };
 
 const darkColors: ColorScheme = {
@@ -61,6 +63,7 @@ const darkColors: ColorScheme = {
   textSubtitle: '#6e6e6e',
   textMedium: '#a0a0a0',
   textHighlighted: '#c4c4c4',
+  backdrop: '#4F4F4F66',
 };
 
 const fonts: Fonts = {
